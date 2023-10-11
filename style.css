@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #232323; /* Змінити колір фону */
+    margin: 0;
+    color: #fff; /* Змінити колір тексту */
+}
+
+header {
+    background-color: #111; /* Змінити колір фону заголовка */
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333; /* Змінити колір фону навігації */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #333; /* Змінити колір тексту при наведенні */
+}
+
+.main {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap; /* Карточки переносяться на новий ряд при необхідності */
+    justify-content: flex-start; /* Карточки розташовуються зліва */
+    flex-grow: 1; /* Карточки займають весь доступний простір в main */
+}
+
+
+.info-box {
+    color: #fff;
+    width: auto;
+    padding: 20px;
+    background-color: #444; /* Змінити колір фону контейнера */
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Загальні стилі для карточок */
+.bike-card {
+    background-color: #444;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Вирівнювання по вертикалі по центру */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Мінімальна ширина для карточки */
+    height: 220px;
+    box-sizing: border-box; /* Ураховує відступи в обчисленні ширини */
+    justify-content: space-between; /* Розміщення контенту по обидва боки */
+}
+/* Стилі для зображень велосипедів */
+.bike-card img {
+    border-radius: 5px;
+    max-width: 20%;
+    height: auto;
+    margin-left: 10px; /* Відступ зліва від картинки */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 2);
+}
+/* Стилі для заголовків велосипедів */
+.bike-card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Стилі для опису велосипедів */
+.bike-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Стилі для ціни велосипедів */
+.bike-card p:last-child {
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.button-container button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin-bottom: 5px;
+}
+.bike-card button:hover {
+    background-color: #d84800;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.bike-info {
+    width: 400px;
+    align-items: center;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+/* Стилі для бокового меню (sidenav) */
+.sidenav {
+    width: 250px;
+    z-index: 1;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    border-radius: 10px; /* Круглі кути для фільтру */
+    margin: 5px; /* Відступ справа для фільтру */
+    padding: 5px; /* Внутрішні відступи для фільтру */
+    flex-shrink: 0; /* Фільтр не зменшується при зменшенні вікна */
+}
+
+.sidebar {
+    padding: 20px;
+    color: #fff;
+}
+
+
+
+/* Стилі для бокового бару (sidebar) */
+.sidebar {
+    padding: 20px;
+    color: #fff;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Стилі для форми фільтра */
+#filterForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+select, button {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+    background-color: #ff6600;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff5500;
+}
+
+
+footer {
+    background-color: #111; /* Змінити колір фону підвалу */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 9999;                                                                           
+}
+
+/* Стилізація скрол-бару для веб-кіт браузерів (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px; /* Ширина скрол-бару */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff6600; /* Колір бару */
+    border-radius: 5px; /* Круглі кути */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #d84800; /* Колір бару при наведенні */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #444; /* Колір фону треку (фонова частина скрол-бару) */
+}
+
+/* Сховати горизонтальний скрол-бар, якщо потрібно */
+::-webkit-scrollbar-horizontal {
+    display: none;
+}
